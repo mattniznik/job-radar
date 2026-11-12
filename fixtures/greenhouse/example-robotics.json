@@ -1,0 +1,59 @@
+{
+  "jobs": [
+    {
+      "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1001",
+      "id": 1001,
+      "title": "Forward Deployed Engineer",
+      "company_name": "Example Robotics",
+      "location": { "name": "San Francisco, CA • New York, NY • United States" },
+      "first_published": "2026-11-08T09:00:00-08:00",
+      "updated_at": "2026-11-08T09:00:00-08:00"
+    },
+    {
+      "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1002",
+      "id": 1002,
+      "title": "Applied AI Engineer, Public Sector",
+      "company_name": "Example Robotics",
+      "location": { "name": "Remote - US" },
+      "first_published": "2026-11-03T09:00:00-08:00",
+      "updated_at": "2026-11-03T09:00:00-08:00"
+    },
+    {
+      "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1003",
+      "id": 1003,
+      "title": "Solutions Engineer",
+      "company_name": "Example Robotics",
+      "location": { "name": "Remote" },
+      "first_published": "2026-09-01T09:00:00-07:00",
+      "updated_at": "2026-10-15T09:00:00-07:00"
+    },
+    {
+      "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1004",
+      "id": 1004,
+      "title": "Mechanical Engineer",
+      "company_name": "Example Robotics",
+      "location": { "name": "San Francisco, CA" },
+      "first_published": "2026-11-01T09:00:00-07:00",
+      "updated_at": "2026-11-01T09:00:00-07:00"
+    },
+    {
+      "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1005",
+      "id": 1005,
+      "title": "Account Executive, Enterprise",
+      "company_name": "Example Robotics",
+      "location": { "name": "New York, NY" },
+      "first_published": "2026-11-01T09:00:00-07:00",
+      "updated_at": "2026-11-01T09:00:00-07:00"
+    },
+    {
+      "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1006",
+      "id": 1006,
+      "title": "Senior Software Engineer, Platform",
+      "company_name": "Example Robotics",
+      "location": { "name": "Oakland, CA" },
+      "first_published": "2026-11-01T09:00:00-07:00",
+      "updated_at": "2026-11-01T09:00:00-07:00"
+    }
+  ],
+  "meta": { "total": 6 }
+}

@@ -1,0 +1,111 @@
+# job-radar settings. Copy this file to radar.yaml and make it yours.
+#
+# Two kinds of pattern appear below:
+#   words  plain phrases, case-insensitive, matched as whole words ("ai" does not match "said")
+#   regex  JavaScript regular expressions, case-insensitive. Single quotes keep the backslashes.
+# An empty list always means "match nothing".
+
+# --- What you are looking for ---------------------------------------------------------
+# A profile is one kind of role you would take. A posting whose title matches no profile's
+# `titles` is not read at all. First match wins, so put the specific profiles first.
+#   titles    words, matched against the job title
+#   keywords  words, counted in the posting text: each one found adds 8 points, up to 48
+#   avoid     words that count against a posting: 5 points each, up to 15
+# The YAML anchor (&stack, *stack) shares one list between profiles.
+profiles:
+  ai:
+    titles: [forward deployed, forward deployment, deployed engineer, deployment engineer, applied ai, ai engineer, ai solutions, llm, machine learning engineer]
+    keywords: [Python, TypeScript, LLM, LLMs, RAG, evals, prompt engineering, agents, APIs, customers, prototype, prototypes, AWS, SQL, React]
+    avoid: &stack [Java, Scala, Kotlin, Golang, C++, .NET]
+  solutions:
+    titles: [solutions engineer, solutions architect, sales engineer, customer engineer, implementation engineer, integration engineer]
+    keywords: [Python, TypeScript, APIs, integrations, demos, proof of concept, technical discovery, customers, SaaS, AWS, SQL]
+    avoid: *stack
+  sales:
+    titles: [account executive, account manager, business development]
+    keywords: [B2B, SaaS, AI, APIs, developers, technical, demos, startups]
+    avoid: [quota attainment, carried quota, quota-carrying]
+  engineering:
+    titles: [full stack, full-stack, product engineer, software engineer]
+    keywords: [TypeScript, React, Node.js, Python, PostgreSQL, AWS, APIs]
+    avoid: *stack
+
+# Dropped even when a profile matches. Words.
+skipTitles: [intern, internship, new grad, junior, entry level, principal, staff, distinguished, director, vp, head of, engineering manager, research scientist, phd, clearance]
+
+# --- Lanes ------------------------------------------------------------------------------
+# Sorts a matched title into a tier. Regexes on the title, first match wins, so the order
+# is the rule. A title no row catches is a maybe, so nothing disappears unnoticed.
+#   keep   the main list
+#   sales  its own section, so a long list of sales roles does not bury the main one
+#   maybe  a folded section
+#   drop   never read and never listed, like skipTitles
+types:
+  - { name: Forward Deployed / Applied AI, tier: keep, titles: ['forward.deploy', 'deployed (ai )?engineer', 'deployment engineer', 'applied ai', 'ai solutions', '\bfde\b'] }
+  - { name: AI / ML engineer, tier: keep, titles: ['machine learning', '\bml\b', '\bai\b.*engineer', 'engineer.*\bai\b', '\bllm\b', 'generative', 'agentic'] }
+  - { name: Solutions engineer / architect, tier: keep, titles: ['solutions? (engineer|architect|consultant)', 'sales engineer', 'customer engineer', 'implementation engineer', 'integrations? engineer'] }
+  - { name: Account executive / manager, tier: sales, titles: ['account (executive|manager)', 'business development'] }
+  - { name: Backend / platform / data, tier: drop, titles: ['back.?end', 'platform', '\bdata\b', 'infrastructure'] }
+  - { name: Full stack / product engineer, tier: maybe, titles: ['full.?stack', 'product engineer'] }
+  - { name: General software engineer, tier: maybe, titles: ['software (engineer|developer)'] }
+
+# --- Where ------------------------------------------------------------------------------
+# A posting is kept when one of its places is local, or it is remote with a US option (or no
+# country at all, which scores lower). The remote check is written for a US search.
+#   places     words: the cities you would commute to
+#   preferred  words: the subset you would rather have (25 points instead of 15)
+#   region     the state words a place must sit beside, matched with the case as written
+#              ("CA" does not match "Canada"). Most city names exist in more than one state.
+#   bare       words: places that count alone, with no state, when nothing else names one
+#   elsewhere  words: a title naming one of these is a job based there, even when posted as
+#              remote ("Forward Deployed Engineer (Atlanta, Georgia)"), so it is dropped
+#              unless the posting is local anyway
+#   remote     false keeps local postings only
+location:
+  places: [San Francisco, Oakland, Berkeley, Emeryville, Palo Alto, Mountain View, San Mateo, Redwood City]
+  preferred: [San Francisco, Oakland]
+  region: [CA, Calif, California]
+  bare: [San Francisco, Palo Alto, Mountain View]
+  elsewhere: [New York, NYC, Seattle, Austin, Boston, Chicago, Denver, Atlanta, Georgia, Texas, EMEA, APAC, East Coast]
+  remote: true
+
+# --- Score ------------------------------------------------------------------------------
+# Listed at or above this score; below it, counted and stored but not listed. With the
+# weights in src/rules.mjs a remote US posting with three keyword hits scores
+# 10 + 3 x 8 + 15 = 49.
+minScore: 45
+
+# A posted yearly base (hourly x 2080) that tops out under this loses 25 points. 0 turns it off.
+salaryFloor: 120000
+
+# --- Work authorization -------------------------------------------------------------------
+# Regexes, matched as whole words against the full posting text. Each match carries the
+# sentence around it into the report, so a false positive is easy to see.
+#   block  moves the posting to "Not eligible", whatever its score
+#   flag   keeps it in its lane, marked red
+# Move a group between the two to match your own situation.
+workAuth:
+  block:
+    citizenship: ['must be (a )?U\.?S\.? citizens?', 'U\.?S\.? citizens? only', 'U\.?S\.? citizenship (is )?required', 'requires? U\.?S\.? citizenship']
+    residency: ['U\.?S\.? citizens? or (lawful |legal )?permanent residents?', 'green card holders?']
+    clearance: ['security clearance', 'secret clearance', 'top secret', 'TS/SCI', 'active clearance', 'clearance (is )?required']
+    usPerson: ['must be a U\.?S\.? person', 'U\.?S\.? persons? only', 'ITAR']
+  flag:
+    # The lookahead skips export-licence wording ("without sponsorship for an export
+    # license"), which is about controlled technology, not a work visa.
+    noSponsorship: ['(unable|not able|cannot|will not|won.t|do not|does not|don.t|doesn.t)( to)?( provide| offer)?( visa| employment| H-?1B)? sponsor(ship|ing)?', 'no (visa |H-?1B )?sponsorship', 'without (the need for )?(current or future |any |future )?(visa |employment |H-?1B )?sponsorship(?! for an? export)', 'sponsorship (is )?not (available|offered|provided)']
+
+# --- Sources ------------------------------------------------------------------------------
+# Public company job boards. No key needed. Find a company's token in its jobs page URL:
+#   job-boards.greenhouse.io/<token>   jobs.lever.co/<token>   jobs.ashbyhq.com/<token>
+# The company name comes from Greenhouse's response; for Lever and Ashby the token stands in
+# for it. Dedupe ignores case and punctuation, so the token "example-health" and a Hacker
+# News post from "Example Health" are one company.
+# These are examples; replace them with the companies you want to watch.
+boards:
+  greenhouse: [anthropic, figma, stripe]
+  lever: [palantir]
+  ashby: [openai, notion, ramp]
+
+# The newest Hacker News "Ask HN: Who is hiring?" thread, through the public Algolia HN API.
+hackernews: true

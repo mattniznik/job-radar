@@ -1,0 +1,11 @@
+{
+  "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1002",
+  "id": 1002,
+  "title": "Applied AI Engineer, Public Sector",
+  "company_name": "Example Robotics",
+  "location": { "name": "Remote - US" },
+  "first_published": "2026-11-03T09:00:00-08:00",
+  "updated_at": "2026-11-03T09:00:00-08:00",
+  "content": "&lt;p&gt;Bring our LLM tooling to government warehouse programs. You will work in Python, build evals and prototypes, and travel to customers.&lt;/p&gt;&lt;h3&gt;Requirements&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;An active Secret clearance, or the ability to obtain one before your start date&lt;/li&gt;&lt;li&gt;Experience shipping APIs on AWS&lt;/li&gt;&lt;/ul&gt;",
+  "offices": [{ "name": "US", "location": null }]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "a1b2c3d4-0001",
+    "text": "AI Solutions Engineer",
+    "categories": { "commitment": "Full-time", "location": "Remote - United States", "team": "Customer Engineering", "allLocations": ["Remote - United States"] },
+    "country": "US",
+    "workplaceType": "remote",
+    "hostedUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0001",
+    "applyUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0001/apply",
+    "createdAt": 1793898000000,
+    "descriptionPlain": "Acme Analytics sells a forecasting API to retailers. As an AI Solutions Engineer you take a customer from first call to production.",
+    "lists": [
+      { "text": "What you will do", "content": "<li>Build agents and RAG pipelines on top of our LLM stack in Python</li><li>Run evals with each customer before go-live</li><li>Write the TypeScript and SQL glue between our APIs and theirs</li>" },
+      { "text": "Nice to have", "content": "<li>Some Java, for older customer systems</li>" }
+    ],
+    "additionalPlain": "Acme Analytics is an equal opportunity employer.",
+    "salaryRange": { "currency": "USD", "interval": "per-year-salary", "min": 150000, "max": 185000 },
+    "salaryDescriptionPlain": "Base salary, plus equity."
+  },
+  {
+    "id": "a1b2c3d4-0002",
+    "text": "Account Executive",
+    "categories": { "commitment": "Full-time", "location": "Remote - United States", "team": "Sales", "allLocations": ["Remote - United States"] },
+    "country": "US",
+    "workplaceType": "remote",
+    "hostedUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0002",
+    "applyUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0002/apply",
+    "createdAt": 1793376000000,
+    "descriptionPlain": "Sell our forecasting API to B2B SaaS companies and startups. You will run technical demos for developers and work closely with our AI team.",
+    "lists": [
+      { "text": "You have", "content": "<li>Three years of quota attainment in software sales</li><li>Comfort explaining APIs to a technical buyer</li>" }
+    ],
+    "salaryRange": { "currency": "USD", "interval": "per-year-salary", "min": 140000, "max": 180000 }
+  },
+  {
+    "id": "a1b2c3d4-0003",
+    "text": "Full Stack Engineer",
+    "categories": { "commitment": "Contract", "location": "Oakland, CA", "team": "Product", "allLocations": ["Oakland, CA"] },
+    "country": "US",
+    "workplaceType": "onsite",
+    "hostedUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0003",
+    "applyUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0003/apply",
+    "createdAt": 1794249000000,
+    "descriptionPlain": "A six month contract on our customer dashboard: TypeScript, React and Node.js on the front, Python and PostgreSQL behind it, all on AWS.",
+    "lists": [],
+    "salaryRange": { "currency": "USD", "interval": "per-hour-wage", "min": 50, "max": 55 }
+  },
+  {
+    "id": "a1b2c3d4-0004",
+    "text": "Forward Deployed Engineer (Atlanta, Georgia)",
+    "categories": { "commitment": "Full-time", "location": "Remote - United States", "team": "Customer Engineering", "allLocations": ["Remote - United States"] },
+    "country": "US",
+    "workplaceType": "remote",
+    "hostedUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0004",
+    "applyUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0004/apply",
+    "createdAt": 1793545200000,
+    "descriptionPlain": "Work on site with our retail customers in the Atlanta area. Python, LLM, RAG, evals, APIs.",
+    "lists": []
+  },
+  {
+    "id": "a1b2c3d4-0005",
+    "text": "Software Engineer, Data Platform",
+    "categories": { "commitment": "Full-time", "location": "Remote - United States", "team": "Platform", "allLocations": ["Remote - United States"] },
+    "country": "US",
+    "workplaceType": "remote",
+    "hostedUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0005",
+    "applyUrl": "https://jobs.lever.co/acme-analytics/a1b2c3d4-0005/apply",
+    "createdAt": 1792508400000,
+    "descriptionPlain": "Own the pipelines behind our forecasts.",
+    "lists": []
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "job-radar",
+  "version": "0.1.0",
+  "description": "A config-driven job finder: reads public job-board APIs, ranks postings against your target roles, flags work-authorization limits, and never applies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Mat Niznik",
+  "bin": {
+    "job-radar": "bin/radar.mjs"
+  },
+  "scripts": {
+    "start": "node bin/radar.mjs",
+    "offline": "node bin/radar.mjs --offline --out output/offline",
+    "sample": "node bin/radar.mjs --offline --today 2026-11-11 --out output/sample --report docs/sample-report.html",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.17"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "absolute_url": "https://boards.greenhouse.io/example-robotics/jobs/1001",
+  "id": 1001,
+  "title": "Forward Deployed Engineer",
+  "company_name": "Example Robotics",
+  "location": { "name": "San Francisco, CA • New York, NY • United States" },
+  "first_published": "2026-11-08T09:00:00-08:00",
+  "updated_at": "2026-11-08T09:00:00-08:00",
+  "content": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Example Robotics builds picking robots for mid-size warehouses. Forward Deployed Engineers sit with customers and turn a pilot into a working system.&lt;/p&gt;&lt;/div&gt;&lt;h3&gt;What you will do&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Write Python and TypeScript services that connect our fleet to each customer&amp;#39;s warehouse software through their APIs&lt;/li&gt;&lt;li&gt;Build RAG and LLM features for the operator console, with evals that run before every release&lt;/li&gt;&lt;li&gt;Prototype on site, then hand a stable version to the core team&lt;/li&gt;&lt;li&gt;Own a small AWS footprint per customer and the SQL that reports on it&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The base salary range for this role is $165,000 &amp;#8211; $210,000.&lt;/p&gt;&lt;p&gt;Example Robotics is an equal opportunity employer and considers applicants without regard to protected veteran or military status.&lt;/p&gt;",
+  "offices": [{ "name": "San Francisco", "location": "San Francisco, CA" }]
+}

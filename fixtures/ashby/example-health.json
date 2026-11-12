@@ -1,0 +1,68 @@
+{
+  "apiVersion": "1",
+  "jobs": [
+    {
+      "id": "eh-0001",
+      "title": "Forward Deployed Engineer",
+      "isListed": true,
+      "location": "United States",
+      "secondaryLocations": [{ "location": "US - Remote" }],
+      "address": { "postalAddress": { "addressCountry": "United States" } },
+      "workplaceType": "Remote",
+      "jobUrl": "https://jobs.ashbyhq.com/example-health/eh-0001",
+      "applyUrl": "https://jobs.ashbyhq.com/example-health/eh-0001/application",
+      "publishedAt": "2026-11-09T16:00:00.000+00:00",
+      "descriptionPlain": "Example Health writes clinical notes from visit audio. Forward Deployed Engineers own a hospital rollout end to end.\nYou will build LLM agents and RAG over each customer's records in Python and TypeScript, write the evals that decide when a prototype is safe to ship, and connect our APIs to the hospital's systems on AWS.\nYou will spend about a third of your time with customers.\nExample Health is an equal opportunity employer. We do not discriminate on the basis of protected veteran or military status.",
+      "compensation": {
+        "compensationTierSummary": "$170K - $215K",
+        "summaryComponents": [{ "compensationType": "Salary", "interval": "1 YEAR", "currencyCode": "USD", "minValue": 170000, "maxValue": 215000 }]
+      }
+    },
+    {
+      "id": "eh-0002",
+      "title": "Applied AI Engineer",
+      "isListed": false,
+      "location": "United States",
+      "secondaryLocations": [],
+      "workplaceType": "Remote",
+      "jobUrl": "https://jobs.ashbyhq.com/example-health/eh-0002",
+      "publishedAt": "2026-11-07T16:00:00.000+00:00",
+      "descriptionPlain": "An unlisted posting. Python, LLM, RAG, evals, agents, APIs, AWS."
+    },
+    {
+      "id": "eh-0003",
+      "title": "Deployment Engineer",
+      "isListed": true,
+      "location": "Toronto, Canada",
+      "secondaryLocations": [],
+      "address": { "postalAddress": { "addressLocality": "Toronto", "addressRegion": "Ontario", "addressCountry": "Canada" } },
+      "workplaceType": "Remote",
+      "jobUrl": "https://jobs.ashbyhq.com/example-health/eh-0003",
+      "publishedAt": "2026-11-06T16:00:00.000+00:00",
+      "descriptionPlain": "Remote within Canada. Python, LLM, RAG."
+    },
+    {
+      "id": "eh-0004",
+      "title": "Machine Learning Engineer",
+      "isListed": true,
+      "location": "San Francisco, CA",
+      "secondaryLocations": [],
+      "address": { "postalAddress": { "addressLocality": "San Francisco", "addressRegion": "CA", "addressCountry": "United States" } },
+      "workplaceType": "Hybrid",
+      "jobUrl": "https://jobs.ashbyhq.com/example-health/eh-0004",
+      "publishedAt": "2026-04-20T16:00:00.000+00:00",
+      "descriptionHtml": "<p>Train and evaluate the speech and LLM models behind our notes. Python, evals, SQL, AWS.</p><p>Hybrid, three days a week in San Francisco.</p>"
+    },
+    {
+      "id": "eh-0005",
+      "title": "Product Engineer",
+      "isListed": true,
+      "location": "Berkeley, CA",
+      "secondaryLocations": [],
+      "workplaceType": "OnSite",
+      "jobUrl": "https://jobs.ashbyhq.com/example-health/eh-0005",
+      "publishedAt": "2026-10-28T16:00:00.000+00:00",
+      "descriptionPlain": "Build the clinician-facing app with the design team. You will write Kotlin for Android and Swift for iOS."
+    }
+  ]
+}

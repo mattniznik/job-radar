@@ -1,0 +1,11 @@
+node_modules/
+
+# Run output: reports, jobs.json, the first-seen ledger and the database
+output/
+*.db
+*.db-wal
+*.db-shm
+*.tmp
+
+# Your own search settings. radar.example.yaml is the shared one.
+radar.yaml
