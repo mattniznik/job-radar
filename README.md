@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/mattniznik/job-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/mattniznik/job-radar/actions/workflows/ci.yml) ![Node 22+](https://img.shields.io/badge/node-22%2B-339933) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-**Live demo:** [the sample report](https://mattniznik.github.io/job-radar/sample-report.html), built offline from the fixtures in this repo.
+![Sample report, built offline from the fixtures in this repo](docs/sample-report.png)
 
 A config-driven job finder. It reads public company job boards (Greenhouse, Lever, Ashby) and
 the monthly Hacker News "Who is hiring?" thread, keeps the postings that match the roles you
